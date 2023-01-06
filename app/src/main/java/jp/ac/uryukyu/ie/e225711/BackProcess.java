@@ -1,7 +1,7 @@
 package jp.ac.uryukyu.ie.e225711;
 
 public class BackProcess {
-  Player player = new Player();
+  // Player player = new Player();
 
   private boolean canUseFinger;
   private String fingerNum;
@@ -22,12 +22,12 @@ public class BackProcess {
     this.fingerNum = fingerNum;
   }
 
-  public void arrangementFinger(int num) {
-    player.remainFinger.remove(player.remainFinger.indexOf(num));
-    player.usedFinger.add(num);
+  public void arrangementFinger(int num,Player p) {
+    p.remainFinger.remove(p.remainFinger.indexOf(num));
+    p.usedFinger.add(num);
   }
 
-  public void getInput() {
+  public void getInput(Player name) {
     System.out.println("使用する数字を入力してください");
 
     fingerNum = new java.util.Scanner(System.in).next();
@@ -37,7 +37,7 @@ public class BackProcess {
     } else {
       int intFingerNum = Integer.parseInt(fingerNum);
       setCanUseFinger(true);
-      arrangementFinger(intFingerNum);
+      arrangementFinger(intFingerNum, name);
     }
 
   }

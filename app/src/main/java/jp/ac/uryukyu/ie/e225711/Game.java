@@ -40,7 +40,7 @@ public class Game {
         System.out.println(player1.getName() + "の番です");
         System.out.println("持ち指は" + player1.remainFinger);
 
-        backProcess.getInput();
+        backProcess.getInput(player1);
         if (backProcess.getCanUseFinger()) {
           if (!judge.winJudge(player1)) {
             setLoop(2);
@@ -49,12 +49,12 @@ public class Game {
             setGameLoop(false);
           }
         } else {
-          setLoop(1);
+          setLoop(2);
         }
       } else {
         System.out.println(player2.getName() + "の番です");
-        System.out.println("持ち指は" + player1.remainFinger);
-        backProcess.getInput();
+        System.out.println("持ち指は" + player2.remainFinger);
+        backProcess.getInput(player2);
         if (backProcess.getCanUseFinger()) {
           if (!judge.winJudge(player1)) {
             setLoop(1);
@@ -63,7 +63,7 @@ public class Game {
             setGameLoop(false);
           }
         } else {
-          setLoop(2);
+          setLoop(1);
         }
       }
     }
