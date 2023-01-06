@@ -1,9 +1,5 @@
 package jp.ac.uryukyu.ie.e225711;
 
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
-
 public class BackProcess {
   Player player = new Player();
 
@@ -34,13 +30,13 @@ public class BackProcess {
   public void getInput() {
     System.out.println("使用する数字を入力してください");
 
-    Scanner scan = new java.util.Scanner(System.in);
-    String fingerNum = scan.next();
+    fingerNum = new java.util.Scanner(System.in).next();
 
     if (fingerNum.equals("パス")) {
       setCanUseFinger(false);
     } else {
       int intFingerNum = Integer.parseInt(fingerNum);
+      setCanUseFinger(true);
       arrangementFinger(intFingerNum);
     }
 
