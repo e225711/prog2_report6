@@ -26,7 +26,7 @@ public class Game {
     this.loop = loop;
   }
 
-  public void gameStart() {
+  public void inputName(){
     System.out.println("先攻の名前を入力してください");
     String player1Name = new java.util.Scanner(System.in).next();
     System.out.println("後攻の名前を入力してください");
@@ -34,7 +34,10 @@ public class Game {
 
     player1.setName(player1Name);
     player2.setName(player2Name);
+  }
 
+  public void gameStart() {
+    inputName();
     while (isGameLoop()) {
       if (getLoop() % 2 == 1) {
         System.out.println(player1.getName() + "の番です");
