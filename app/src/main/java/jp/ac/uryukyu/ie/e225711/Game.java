@@ -20,6 +20,8 @@ public class Game {
 
   /**
    * gameLoopを受け取るメソッド。
+   * 
+   * @return gameLoop 対象
    */
   public boolean isGameLoop() {
     return gameLoop;
@@ -36,6 +38,8 @@ public class Game {
 
   /**
    * loopを受け取るメソッド。
+   * 
+   * @return loop 対象
    */
   public int getLoop() {
     return loop;

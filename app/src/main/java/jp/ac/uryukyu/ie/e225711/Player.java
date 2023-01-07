@@ -7,8 +7,8 @@ import java.util.List;
 /**
  * プレイヤークラス。
  * String name; //プレイヤーの名前
- * List<Integer> remainFinger; //残っている指(数字)
- * List<Integer> usedFinger; //使用した指(数字)
+ * List remainFinger; //残っている指(数字)
+ * List usedFinger; //使用した指(数字)
  * Created by e225711
  */
 public class Player {
@@ -21,13 +21,14 @@ public class Player {
    * 
    * @param name 名前
    */
-  public String setName(String name) {
+  public void setName(String name) {
     this.name = name;
-    return this.name;
   }
 
   /**
    * nameを受け取るメソッド
+   * 
+   * @return this.name 対象
    */
   public String getName() {
     return this.name;

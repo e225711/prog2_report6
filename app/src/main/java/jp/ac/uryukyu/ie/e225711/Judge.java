@@ -10,6 +10,7 @@ public class Judge {
    * 残っている指(数字)が0のとき、trueを返す
    * 
    * @param name 確認したいplayer
+   * @return true or false
    */
   public boolean winJudge(Player name) {
     if (name.remainFinger.size() == 0) {

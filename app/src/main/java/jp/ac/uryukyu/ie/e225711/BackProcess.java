@@ -12,6 +12,8 @@ public class BackProcess {
 
   /**
    * canUseFingerを受け取るメソッド。
+   * 
+   * @return canUseFinger 対象
    */
   public boolean getCanUseFinger() {
     return canUseFinger;
@@ -19,6 +21,8 @@ public class BackProcess {
 
   /**
    * canUseFingerを代入するメソッド。
+   * 
+   * @param canUseFinger true or false
    */
   public void setCanUseFinger(boolean canUseFinger) {
     this.canUseFinger = canUseFinger;
