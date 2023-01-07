@@ -24,7 +24,7 @@ public class Game {
    * @return gameLoop 対象
    */
   public boolean isGameLoop() {
-    return gameLoop;
+    return this.gameLoop;
   }
 
   /**
@@ -42,7 +42,7 @@ public class Game {
    * @return loop 対象
    */
   public int getLoop() {
-    return loop;
+    return this.loop;
   }
 
   /**
