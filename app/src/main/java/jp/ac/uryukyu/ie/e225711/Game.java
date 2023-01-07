@@ -94,7 +94,7 @@ public class Game {
         System.out.println("持ち指は" + player2.remainFinger);
         backProcess.getInput(player2);
         if (backProcess.getCanUseFinger()) {
-          if (!judge.winJudge(player1)) {
+          if (!judge.winJudge(player2)) {
             setLoop(1);
           } else {
             System.out.println(player2.getName() + "の勝利です！\nゲームを終了します!");
